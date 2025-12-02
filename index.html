@@ -14,6 +14,19 @@
 
     <body>
 
+        <main>
+            <div id="map">
+            </div>
+        </main>
+
+        <script>
+            const latLong = [28.6139, 77.2090];
+            const map = L.map('map').setView(latLong, 12);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap Contributors'
+            }).addTo(map)
+        </script>
     </body>
 
 </html>
